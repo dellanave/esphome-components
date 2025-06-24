@@ -1,4 +1,4 @@
-#for documentation see project at https://github.com/Dilbert66/esphome-dsckeybus
+#for documentation see project at https://github.com/dellanave/esphome-dsckeybus
 substitutions:
   name: "dscalarm" #unique network name
   friendlyName: "DSC Alarm" #friendly name for this device
@@ -32,9 +32,9 @@ dsc_alarm_panel:
   expanderaddr2: "0" # 2nd expander emulator address to use . Set to 0 to disable. 
 
   ##ESP32 Pins
-  dscclockpin: "22"
-  dscreadpin: "21"
-  dscwritepin: "18"
+  dscclockpin: "18"
+  dscreadpin: "19"
+  dscwritepin: "21"
   
   ##ESP8266 Pins
   #dscclockpin: "5"
@@ -58,7 +58,7 @@ esp32:
 #copy the code to directory "my_components" in your main esphome directory   
 # see here for more info: https://esphome.io/components/external_components       
 external_components:
-  - source: github://Dilbert66/esphome-components@main #uncomment to use github repository
+  - source: github://dellanave/esphome-components@main #uncomment to use github repository
   #- source:  my_components #uncomment to use local directory 
     components: [dsc_alarm_panel,binary_sensor,text_sensor] 
     refresh: 10min
